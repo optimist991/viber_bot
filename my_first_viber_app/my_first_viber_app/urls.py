@@ -18,7 +18,9 @@ from django.urls import path, include
 from viber import views
 
 urlpatterns = [
-    # path('set_webhook/', )
+
+    path('unset_webhook/', views.unset_webhook),
+    path('set_webhook/', views.set_webhook),
     path('admin/', admin.site.urls),
     path('callback/', views.callback),
     path('viber/', include('viber.urls')),
